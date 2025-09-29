@@ -1,0 +1,76 @@
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Container for content */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Headline */
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form styles */
+.predict-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Group label + input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Inputs and selects */
+input[type="text"], input[type="number"], select {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: #f0f0f0;
+}
+
+/* Radio buttons in one line */
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Button styling */
+.submit-btn {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    background: #ff9800;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #e68a00;
+}
