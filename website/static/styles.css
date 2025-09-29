@@ -1,76 +1,138 @@
-/* General page styles */
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
-    color: #fff;
+/* Reset some browser defaults */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Wrapper styling */
+body {
+    background: linear-gradient(135deg, #eceff1, #cfd8dc);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
-    padding: 2rem;
+    padding: 1rem;
 }
 
-/* Container for content */
-.container {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 15px;
+/* Card-like container */
+.wrapper {
+    background: white;
     max-width: 500px;
     width: 100%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.7s ease-in-out;
 }
 
-/* Headline */
-h1 {
+/* Title Styling */
+.title {
+    font-size: 1.8rem;
+    font-weight: bold;
     text-align: center;
     margin-bottom: 1.5rem;
+    color: #37474f;
+    letter-spacing: 1px;
 }
 
-/* Form styles */
-.predict-form {
+/* Form layout */
+.form .inputfield {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    margin-bottom: 1rem;
 }
 
-/* Group label + input */
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+label {
+    font-weight: 600;
+    color: #455a64;
+    margin-bottom: 0.3rem;
 }
 
-/* Inputs and selects */
-input[type="text"], input[type="number"], select {
-    padding: 0.5rem;
-    border-radius: 8px;
-    border: none;
+.input, select {
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 1px solid #b0bec5;
     outline: none;
-    font-size: 1rem;
-    background-color: #f0f0f0;
+    transition: 0.2s ease-in-out;
+    font-size: 0.95rem;
 }
 
-/* Radio buttons in one line */
-.radio-group {
+.input:focus, select:focus {
+    border-color: #1976d2;
+    box-shadow: 0px 0px 5px rgba(25, 118, 210, 0.4);
+}
+
+/* Custom select wrapper */
+.custom_select select {
+    width: 100%;
+    background: white;
+}
+
+/* Checkboxes styling */
+.check {
     display: flex;
-    gap: 1rem;
-    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.check label {
+    margin-right: 0.5rem;
 }
 
 /* Button styling */
-.submit-btn {
-    padding: 0.75rem;
-    font-size: 1.1rem;
-    background: #ff9800;
+.btn {
+    background: #1976d2;
+    color: white;
+    font-weight: bold;
     border: none;
-    border-radius: 10px;
-    color: #fff;
+    border-radius: 12px;
+    padding: 0.8rem;
     cursor: pointer;
-    transition: background 0.3s ease;
+    width: 100%;
+    transition: background 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 
-.submit-btn:hover {
-    background: #e68a00;
+.btn:hover {
+    background: #0d47a1;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* Result box */
+.result {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2e7d32;
+    background: #e8f5e9;
+    border-radius: 10px;
+    padding: 0.7rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+    .wrapper {
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
 }
